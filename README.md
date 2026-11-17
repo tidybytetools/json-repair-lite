@@ -36,6 +36,8 @@ Output from an actual run of `json-repair-lite`:
 
 Already-valid JSON is left alone and reported honestly as `wasValid: true`.
 
+![A terminal run of json-repair-lite turning messy JSON into valid JSON](docs/demo.gif)
+
 Plain code, not AI, so the same input always gives the same output. Runs on your own computer. MIT license. Works with Python 3.10 and newer, on Windows, Mac and Linux.
 
 Also searched as: ES: reparar JSON, JSON roto / PT: reparar JSON / DE: JSON reparieren / FR: réparer un JSON cassé / JA: 壊れたJSONを修復
