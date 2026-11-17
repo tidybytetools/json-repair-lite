@@ -12,6 +12,7 @@
 [![Tests](https://github.com/tidybytetools/json-repair-lite/actions/workflows/tests.yml/badge.svg)](https://github.com/tidybytetools/json-repair-lite/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/tidybytetools/json-repair-lite/blob/main/LICENSE)
 [![Version](https://img.shields.io/github/v/release/tidybytetools/json-repair-lite?label=version)](https://github.com/tidybytetools/json-repair-lite/releases)
+[![Apify](https://apify.com/actor-badge?actor=tidybytetools/json-repair)](https://apify.com/tidybytetools/json-repair)
 
 Free tool that repairs broken or incomplete JSON, including output from language models. Runs offline. No API key.
 
@@ -41,7 +42,7 @@ Also searched as: ES: reparar JSON, JSON roto / PT: reparar JSON / DE: JSON repa
 
 ## Links
 
-- A pay-per-use Apify cloud version is in our publish queue and is **not public yet**. This free local tool is the one you can use today. We will add the Store link here after it goes live.
+- **[Apify (no-install cloud version)](https://apify.com/tidybytetools/json-repair)** — pay $0.001 per document; already-valid JSON is reported honestly
 
 <!-- mcp-name: io.github.tidybytetools/json-repair-lite -->
 
@@ -88,7 +89,7 @@ When you run it in a terminal it prints one short line about the Apify version t
 
 ## Lite vs Apify
 
-| | lite (free, this repo) | Apify cloud version (not public yet) |
+| | lite (free, this repo) | [Apify cloud version](https://apify.com/tidybytetools/json-repair) |
 |---|---|---|
 | Repair broken or incomplete JSON | yes, on your computer | yes, in the cloud |
 | JSON Lines | yes | yes |
