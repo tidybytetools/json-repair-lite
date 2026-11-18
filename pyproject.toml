@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "json-repair-lite"
-version = "1.0.0"
+version = "1.0.1"
 description = "Repair broken or incomplete JSON, including output from language models. Local CLI and MCP server. No API key."
 readme = "README.md"
 license = "MIT"
