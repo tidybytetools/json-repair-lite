@@ -36,7 +36,7 @@ Output from an actual run of `json-repair-lite`:
 
 Already-valid JSON is left alone and reported honestly as `wasValid: true`.
 
-![A terminal run of json-repair-lite turning messy JSON into valid JSON](docs/demo.gif)
+![A terminal run of json-repair-lite turning messy JSON into valid JSON](https://raw.githubusercontent.com/tidybytetools/json-repair-lite/main/docs/demo.gif)
 
 Plain code, not AI, so the same input always gives the same output. Runs on your own computer. MIT license. Works with Python 3.10 and newer, on Windows, Mac and Linux.
 
@@ -51,13 +51,15 @@ Also searched as: ES: reparar JSON, JSON roto / PT: reparar JSON / DE: JSON repa
 ## Install
 
 ```
-pip install git+https://github.com/tidybytetools/json-repair-lite
+pip install json-repair-lite
 ```
+
+Or straight from GitHub: `pip install git+https://github.com/tidybytetools/json-repair-lite`
 
 Or use pipx, which keeps it in its own space:
 
 ```
-pipx install git+https://github.com/tidybytetools/json-repair-lite
+pipx install json-repair-lite
 ```
 
 This also installs the [json-repair](https://pypi.org/project/json-repair/) library, which does the repair work, and the `mcp` package for the MCP server.
@@ -107,7 +109,7 @@ There is a small free MCP server built in. It gives your AI app two tools. Both 
 Run it by hand to check it starts (it waits quietly for an app to talk to it):
 
 ```
-uvx --from git+https://github.com/tidybytetools/json-repair-lite json-repair-lite mcp
+uvx json-repair-lite mcp
 ```
 
 Claude Desktop (`claude_desktop_config.json`) or Cursor (`~/.cursor/mcp.json`):
@@ -117,13 +119,13 @@ Claude Desktop (`claude_desktop_config.json`) or Cursor (`~/.cursor/mcp.json`):
   "mcpServers": {
     "json-repair-lite": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/tidybytetools/json-repair-lite", "json-repair-lite", "mcp"]
+      "args": ["json-repair-lite", "mcp"]
     }
   }
 }
 ```
 
-`uvx --from git+https://github.com/tidybytetools/json-repair-lite json-repair-lite-mcp` starts the same server.
+`uvx --from json-repair-lite json-repair-lite-mcp` starts the same server.
 
 Tools:
 
@@ -137,7 +139,7 @@ For one document, both return `{"wasValid", "repaired", "value", "text"}`. For s
 - **Use when:** you have JSON that may be missing quotes, have trailing commas, or be cut off, including output from a language model.
 - **Don't use when:** you need to fetch a file from a URL, or the file is bigger than 5 MB in MCP. Use the Apify version for those jobs. Do not use it to invent missing data.
 - **Input:** text on stdin or a file path. Optional `--json-lines`.
-- **MCP:** `uvx --from git+https://github.com/tidybytetools/json-repair-lite json-repair-lite mcp` gives two read-only tools, `repair_json_text` and `repair_json_file`.
+- **MCP:** `uvx json-repair-lite mcp` gives two read-only tools, `repair_json_text` and `repair_json_file`.
 - **Output:** with `--json`, one object: `{"ok": true, "count": 1, "failed": 0, "documents": [...]}`. On error `ok` is false. Exit code 0 ok, 1 error.
 - Hint lines go to stderr only, and only in a terminal, so stdout is always clean JSON. See also [`llms.txt`](https://github.com/tidybytetools/json-repair-lite/blob/main/llms.txt).
 
