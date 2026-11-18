@@ -2,10 +2,10 @@
 
 > Free, MIT-licensed, Python tool (uses the json-repair library; the MCP server also needs the mcp package) that repairs broken or incomplete JSON, including output from language models. Already-valid JSON is left as-is and reported honestly. Runs offline. No API key.
 
-- Install: `pip install git+https://github.com/tidybytetools/json-repair-lite`
+- Install: `pip install json-repair-lite`
 - CLI: `json-repair-lite file`. Reads stdin if no file. `--json-lines` treats each non-empty line as its own document. `--json` prints `{"ok": true, "count": 1, "failed": 0, "documents": [...]}`. Exit 0 ok, 1 error.
 - Python: `from json_repair_lite import repair_one; repair_one("{name: 'Ada',}")`.
-- MCP: `uvx --from git+https://github.com/tidybytetools/json-repair-lite json-repair-lite mcp` exposes two read-only tools: `repair_json_text(text, json_lines=false)` and `repair_json_file(path, json_lines=false)` for local UTF-8 files up to 5 MB.
+- MCP: `uvx json-repair-lite mcp` exposes two read-only tools: `repair_json_text(text, json_lines=false)` and `repair_json_file(path, json_lines=false)` for local UTF-8 files up to 5 MB.
 
 ## Use when
 - You have JSON that may be missing quotes, have trailing commas, or be cut off, including output from a language model.
